@@ -5,7 +5,7 @@ from openpyxl.worksheet.datavalidation import DataValidation
 from openpyxl.workbook.defined_name import DefinedName
 from openpyxl.chart import BarChart, Reference
 
-OUTPUT_FILE = "FinanceOS_V1.xlsx"
+OUTPUT_FILE = "FinanceOne_V1.xlsx"
 MAX_ROWS = 2000
 HEADER_FILL = PatternFill("solid", fgColor="404040")
 HEADER_FONT = Font(color="FFFFFF", bold=True)
@@ -488,7 +488,7 @@ def create_sheet_99_aux(wb, categorias, grupos, cat_data, contas, cartoes):
 def create_sheet_00_dashboard(wb, categorias):
     ws = wb.create_sheet("00_DASHBOARD", 0)
 
-    ws["A1"] = "FinanceOS V1 - Dashboard"
+    ws["A1"] = "FinanceOne V1 - Dashboard"
     ws["A1"].font = Font(size=18, bold=True, color="1F4E78")
     ws["A1"].alignment = Alignment(horizontal="left")
 

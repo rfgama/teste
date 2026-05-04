@@ -1,0 +1,40 @@
+:root {
+  --bg: #0b1020;
+  --surface: #121a2b;
+  --surface-2: #1b2740;
+  --text: #ecf2ff;
+  --muted: #93a0bd;
+  --brand: #4f7cff;
+  --ok: #22c55e;
+  --danger: #ef4444;
+}
+body.light {
+  --bg: #f2f6ff;
+  --surface: #ffffff;
+  --surface-2: #ebf1ff;
+  --text: #0f172a;
+  --muted: #4b5563;
+}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif}
+.app{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+.sidebar{background:var(--surface);padding:1rem;position:sticky;top:0;height:100vh}
+.sidebar h1{margin:0 0 1rem}
+nav{display:grid;gap:.5rem}
+.nav-link{background:transparent;border:1px solid var(--surface-2);color:var(--text);padding:.7rem;border-radius:.6rem;text-align:left;cursor:pointer}
+.nav-link.active,.nav-link:hover{background:var(--brand);border-color:var(--brand)}
+.content{padding:1rem 1.2rem}
+.topbar{display:flex;justify-content:space-between;gap:1rem;align-items:center;flex-wrap:wrap}
+#theme-toggle{border:0;background:var(--brand);color:#fff;padding:.6rem .8rem;border-radius:.6rem;cursor:pointer}
+.grid{display:grid;gap:1rem;margin-top:1rem}
+.cards{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+.two{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card,.panel{background:var(--surface);border:1px solid var(--surface-2);border-radius:1rem;padding:1rem}
+.card h4{margin:.1rem 0;color:var(--muted)} .card strong{font-size:1.25rem}
+.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.6rem}
+input,select,button{padding:.65rem;border-radius:.6rem;border:1px solid var(--surface-2);background:var(--surface-2);color:var(--text)}
+button{cursor:pointer;background:var(--brand);border-color:var(--brand);color:#fff}
+.table-wrap{overflow:auto} table{width:100%;border-collapse:collapse} th,td{padding:.6rem;border-bottom:1px solid var(--surface-2);text-align:left}
+.view{display:none}.view.active{display:block}
+.bar{height:10px;background:var(--surface-2);border-radius:99px;overflow:hidden}.bar span{display:block;height:100%;background:linear-gradient(90deg,#4f7cff,#22d3ee)}
+.goal{margin:.8rem 0}
+@media (max-width: 860px){.app{grid-template-columns:1fr}.sidebar{position:static;height:auto}.content{padding:1rem}}
